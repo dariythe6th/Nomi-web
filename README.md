@@ -36,8 +36,3 @@ npm test
 | 4 | Unreal CSP | предсказание своей позиции + коррекция сервера | [pr4](practice/pr4/README.md) |
 | 5 | Replication Graph | релевантность, спящие друзья, квантование | [pr5](practice/pr5/README.md) |
 | 6 | AES + Spectrum | ECDH + AES-GCM, Cloudflare | [pr6](practice/pr6/README.md) |
-
-## Важное ограничение
-Браузер не даёт сырой UDP. Транспорт здесь WebSocket (TCP), поэтому надёжность и потери **эмулируются на клиенте**
-(`?loss=0.1`, `?lag=100`). Протокол и логика от транспорта не зависят: их можно переносить на WebRTC DataChannel
-(`ordered:false, maxRetransmits:0`), который ведёт себя как UDP. Объясните это на защите.
